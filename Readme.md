@@ -30,13 +30,9 @@ Other ways are:
 
 
 
-# 1 Transfer Learning- CIFAR 10
+# 2 Transfer Learning- CIFAR 10
 # Using Transfer Learning to Train an Image Classification Model
 
-
-Deep learning allows you to learn features automatically from the data. In general this requires a lot of training examples, especially for problems where the input samples are very high-dimensional, like images.
-
-Deep learning models are often trained from scratch, but this can also be an expensive and at time consuming process. Fortunately deep learning models are by nature highly repurposable. Specifically in the case of computer vision, models can be pre-trained on very large-scale datasets (such as ImageNet) and then be reused to solve a different task with high performance. This kind of warm-start training is called Transfer Learning.
 
 
 There are two main Transfer Learning schemes:
@@ -46,7 +42,7 @@ There are two main Transfer Learning schemes:
 
 # Pre-trained Convolutional layers as fixed feature extractor
 
-<img src="../../images/transfer_learning_1.jpg" width="400">
+<img src="/images/transfer_learning_1.jpg" width="400">
 
 This scheme treats the Convolutional layers as a fixed feature extractor for the new dataset. Convolutional layers have fixed weights and therefore are not trained. They are used to extract features and construct a rich vector embedding for every image. Once these embeddings have been computed for all images, they become the new inputs and can be used to train a linear classifier or a fully connected network for the new dataset.
 
@@ -55,7 +51,7 @@ This scheme treats the Convolutional layers as a fixed feature extractor for the
 
 To further improve the performance of our image classifier, we can "fine-tune" a pre-trained VGG model alongside the top-level classifier. Fine-tuning consist in starting from a trained network, then re-training it on a new dataset using very small weight updates.
 
-<img src="../../images/transfer_learning_2.jpeg" width="900">
+<img src="/images/transfer_learning_2.jpeg" width="900">
 
 
 This consists of the following steps:
